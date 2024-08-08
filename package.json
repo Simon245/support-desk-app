@@ -5,7 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "node support-desk-backend/server.js",
-    "server": "nodemon support-desk-backend/server.js"
+    "server": "nodemon support-desk-backend/server.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --ignore-unknown --check './**/*.*'",
+    "format:fix": "prettier --ignore-unknown --write './**/*.*'"
   },
   "author": "Simon Ball",
   "license": "MIT",
@@ -15,5 +19,13 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mongoose": "^8.5.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "eslint": "^9.8.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.9.0",
+    "prettier": "^3.3.3"
   }
 }
