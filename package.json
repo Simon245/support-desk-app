@@ -1,0 +1,11 @@
+{
+  "name": "support-desk",
+  "version": "1.0.0",
+  "description": "Support Ticket App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node support-desk-backend/server.js"
+  },
+  "author": "Simon Ball",
+  "license": "MIT"
+}
