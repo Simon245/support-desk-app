@@ -4,8 +4,8 @@
   "description": "Support Ticket App",
   "main": "server.js",
   "scripts": {
-    "start": "node support-desk-backend/server.js",
-    "server": "nodemon support-desk-backend/server.js",
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --ignore-unknown --check './**/*.*'",
