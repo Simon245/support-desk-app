@@ -38,6 +38,7 @@ function Login() {
               value={email}
               onChange={onChange}
               placeholder="Enter Email"
+              autoComplete="email"
               required
             />
           </div>
@@ -50,6 +51,7 @@ function Login() {
               value={password}
               onChange={onChange}
               placeholder="Enter password"
+              autoComplete="current-password"
               required
             />
           </div>

@@ -44,6 +44,7 @@ function Register() {
               value={name}
               onChange={onChange}
               placeholder="Enter name"
+              autoComplete="name"
               required
             />
           </div>
@@ -56,6 +57,7 @@ function Register() {
               value={email}
               onChange={onChange}
               placeholder="Enter Email"
+              autoComplete="email"
               required
             />
           </div>
@@ -68,6 +70,7 @@ function Register() {
               value={password}
               onChange={onChange}
               placeholder="Enter password"
+              autoComplete="new-password"
               required
             />
           </div>
@@ -80,6 +83,7 @@ function Register() {
               value={passwordConfirmation}
               onChange={onChange}
               placeholder="Confirm password"
+              autoComplete="new-password"
               required
             />
           </div>
