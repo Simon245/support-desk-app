@@ -5,9 +5,10 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import NewTicket from './pages/NewTicket';
-import 'react-toastify/dist/ReactToastify.css';
+import Tickets from './pages/Tickets';
 import { ToastContainer } from 'react-toastify';
 import PrivateRoute from './components/PrivateRoute';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
             <Route path="/register" element={<Register />}></Route>
             <Route path="/new-ticket" element={<PrivateRoute />}>
               <Route path="/new-ticket" element={<NewTicket />} />
+            </Route>
+            <Route path="/tickets" element={<PrivateRoute />}>
+              <Route path="/tickets" element={<Tickets />} />
             </Route>
           </Routes>
         </div>
