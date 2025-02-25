@@ -4,9 +4,10 @@ import { getTickets, reset } from '../features/tickets/ticketSlice';
 import Spinner from '../components/Spinner';
 import BackButton from '../components/BackButton';
 import TicketItem from '../components/TicketItem';
+import { toast } from 'react-toastify';
 
 function Tickets() {
-  const { tickets, isLoading, isSuccess } = useSelector(
+  const { tickets, isError, isLoading, isSuccess, message } = useSelector(
     (state) => state.tickets,
   );
   const dispatch = useDispatch();
@@ -20,8 +21,12 @@ function Tickets() {
   }, [dispatch, isSuccess]);
 
   useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+
     dispatch(getTickets());
-  }, [dispatch]);
+  }, [dispatch, isError, message]);
 
   if (isLoading) {
     return <Spinner />;
