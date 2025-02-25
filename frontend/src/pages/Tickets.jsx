@@ -18,7 +18,7 @@ function Tickets() {
         dispatch(reset());
       }
     };
-  }, [dispatch, isSuccess]);
+  }, [isSuccess]);
 
   useEffect(() => {
     if (isError) {
@@ -26,7 +26,7 @@ function Tickets() {
     }
 
     dispatch(getTickets());
-  }, [dispatch, isError, message]);
+  }, [isError, message]);
 
   if (isLoading) {
     return <Spinner />;
