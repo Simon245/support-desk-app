@@ -27,6 +27,7 @@ This is a MERN (MongoDB, Express, React, Node.js) application to create and view
 ## Environment Variables
 Create a `.env` file in the backend directory and add:
    ```env
+   NODE_ENV=development
    MONGO_URI=your_mongodb_connection_string
    JWT_SECRET=your_jwt_secret
    JWT_EXPIRES=30d
@@ -61,8 +62,8 @@ npm run client
 | POST   | /api/tickets/:ticketId/notes | Create ticket note |
 
 ## Deployment
-For production, build the frontend and serve it with the backend:
 ```sh
+Deployed to Heroku at [https://support-desk-app-4fbbe0b82ccb.herokuapp.com](https://support-desk-app-4fbbe0b82ccb.herokuapp.com)
 
 ```
 
