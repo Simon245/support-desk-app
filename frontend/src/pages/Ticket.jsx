@@ -49,12 +49,12 @@ function Ticket() {
         dispatch(notesReset());
       }
     };
-  }, [isSuccess]);
+  }, [dispatch, isSuccess]);
 
   useEffect(() => {
     dispatch(getTicket(ticketId));
     dispatch(getNotes(ticketId));
-  }, [ticketId]);
+  }, [dispatch, ticketId]);
 
   const onTicketClose = () => {
     dispatch(closeTicket(ticketId));

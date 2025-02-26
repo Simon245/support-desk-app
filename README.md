@@ -21,6 +21,7 @@ This is a MERN (MongoDB, Express, React, Node.js) application to create and view
 2. Install dependencies for both frontend and backend:
    ```sh
    npm install
+   cd frontend / npm install
    ```
 
 ## Environment Variables

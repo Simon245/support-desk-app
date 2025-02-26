@@ -13,8 +13,6 @@ function NewTicket() {
     (state) => state.tickets,
   );
 
-  const [name, setName] = useState(user.name);
-  const [email, setEmail] = useState(user.email);
   const [product, setProduct] = useState('iPhone');
   const [description, setDescription] = useState('');
 
@@ -58,11 +56,21 @@ function NewTicket() {
       <section className="form">
         <div className="form-group">
           <label htmlFor="name">Customer Name</label>
-          <input type="text" className="form-control" value={name} disabled />
+          <input
+            type="text"
+            className="form-control"
+            value={user.name}
+            disabled
+          />
         </div>
         <div className="form-group">
           <label htmlFor="email">Customer Email</label>
-          <input type="text" className="form-control" value={email} disabled />
+          <input
+            type="text"
+            className="form-control"
+            value={user.email}
+            disabled
+          />
         </div>
         <form onSubmit={onSubmit}>
           <div className="form-group">
