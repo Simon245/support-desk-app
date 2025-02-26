@@ -6,7 +6,11 @@ import BackButton from '../components/BackButton';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Modal from 'react-modal';
-import { getNotes, reset as notesReset } from '../features/notes/noteSlice';
+import {
+  createNote,
+  getNotes,
+  reset as notesReset,
+} from '../features/notes/noteSlice';
 import NoteItem from '../components/NoteItem';
 import { FaPlus, FaXmark } from 'react-icons/fa6';
 
@@ -68,7 +72,12 @@ function Ticket() {
 
   const onNoteSubmit = (e) => {
     e.preventDefault();
-    console.log(noteText);
+    dispatch(
+      createNote({
+        ticketId,
+        noteText,
+      }),
+    );
     setNoteText('');
     closeModal();
   };
