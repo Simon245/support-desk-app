@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Support Ticket App",
   "main": "server.js",
-  "workspaces": [
-    "frontend"
-  ],
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
